@@ -127,7 +127,8 @@ body.dashboard {
             & > ul > li > a {
                 & > span {
                     @extend .d-none;
-                    @extend .d-sm-block;
+                    @extend .d-sm-none;
+                    @extend .d-md-inline-block;
                 }
             }
         }
@@ -156,7 +157,7 @@ body.dashboard {
     }
 
     // Sidebar media queries
-    @include media-breakpoint-up(xs) {
+    @include media-breakpoint-up(sm) {
         .sidebar {
             width: $sidebar-normal-width;
         }
@@ -166,7 +167,7 @@ body.dashboard {
         }
     }
 
-    @include media-breakpoint-only(sm) {
+    @include media-breakpoint-down(sm) {
         .sidebar {
             width: 80px;
             left: 150px;
