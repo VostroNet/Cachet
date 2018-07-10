@@ -51,11 +51,13 @@ body.dashboard {
             .quick-add-incident {
                 @extend .text-center;
                 padding: 10px;
-                i {
-                    @extend .d-sm-block;
-                }
+                // i {
+                    
+                //     @extend .d-sm-block;
+                // }
                 span {
-                    @extend .d-sm-none;
+                    @extend .d-none;
+                    @extend .d-sm-block;
                 }
             }
             ul {
@@ -124,7 +126,8 @@ body.dashboard {
             }
             & > ul > li > a {
                 & > span {
-                    @extend .d-sm-none;
+                    @extend .d-none;
+                    @extend .d-sm-block;
                 }
             }
         }
