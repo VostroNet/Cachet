@@ -84,7 +84,11 @@ class NewIncidentNotification extends Notification
                         'unsubscribeUrl'         => cachet_route('subscribe.unsubscribe', $notifiable->verify_code),
                         'manageSubscriptionText' => trans('cachet.subscriber.manage_subscription'),
                         'manageSubscriptionUrl'  => cachet_route('subscribe.manage', $notifiable->verify_code),
-                    ]);
+                    ])
+                    ->withSwiftMessage(function ($message) {
+                        $message->getHeaders()
+                            ->addTextHeader('List-Unsubscribe', cachet_route('subscribe.unsubscribe', $notifiable->verify_code));
+                    });
     }
 
     /**

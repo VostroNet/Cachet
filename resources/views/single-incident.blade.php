@@ -25,12 +25,12 @@
         @foreach ($incident->updates as $update)
         <div class="moment {{ $loop->first ? 'first' : null }}" id="update-{{ $update->id }}">
             <div class="row event clearfix">
-                <div class="col-sm-1">
+                <div class="col-1">
                     <div class="status-icon status-{{ $update->status }}" data-toggle="tooltip" title="{{ $update->human_status }}" data-placement="left">
                         <i class="{{ $update->icon }}"></i>
                     </div>
                 </div>
-                <div class="col-10 offset-2 col-sm-11 col-sm-offset-0">
+                <div class="col-11">
                     <div class="panel panel-message incident">
                         <div class="panel-body">
                             @if($currentUser)

@@ -17,12 +17,12 @@
     <div class="content-wrapper">
         <div class="moment first">
             <div class="row event clearfix">
-                <div class="col-sm-1">
+                <div class="col-1">
                     <div class="status-icon status-{{ $schedule->status }}" data-toggle="tooltip" title="{{ $schedule->human_status }}" data-placement="left">
                         <i class="icon ion-android-calendar"></i>
                     </div>
                 </div>
-                <div class="col-10 offset-2 col-sm-11 col-sm-offset-0">
+                <div class="col-11">
                     <div class="panel panel-message incident">
                         <div class="panel-heading">
                             <strong>{{ $schedule->name }}</strong>{{ trans("cachet.incidents.scheduled_at", ["timestamp" => $schedule->scheduled_at_diff]) }}
