@@ -48,6 +48,9 @@ class SystemTestNotification extends Notification
         return (new MailMessage())
                     ->subject(trans('notifications.system.test.mail.subject'))
                     ->greeting(trans('notifications.system.test.mail.title'))
-                    ->line(trans('notifications.system.test.mail.content'));
+                    ->line(trans('notifications.system.test.mail.content'))
+                    ->getSwiftMessage()
+                    ->getHeaders()
+                    ->addTextHeader('List-Unsubscribe', 'http://unsubscribe');
     }
 }

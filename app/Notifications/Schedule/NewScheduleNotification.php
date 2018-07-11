@@ -79,10 +79,9 @@ class NewScheduleNotification extends Notification
                     ->line($content)
                     ->action(trans('notifications.schedule.new.mail.action'), cachet_route('schedule', [$this->schedule]))
                     ->line(trans('cachet.subscriber.unsubscribe', ['link' => cachet_route('subscribe.unsubscribe', $notifiable->verify_code)]))
-                    ->withSwiftMessage(function ($message) {
-                        $message->getHeaders()
-                            ->addTextHeader('List-Unsubscribe', cachet_route('subscribe.unsubscribe', $notifiable->verify_code));
-                    });
+                    ->getSwiftMessage()
+                    ->getHeaders()
+                    ->addTextHeader('List-Unsubscribe', cachet_route('subscribe.unsubscribe', $notifiable->verify_code));
     }
 
     /**
