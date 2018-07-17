@@ -28,7 +28,7 @@ return [
     // Incidents
     'incidents' => [
         'none'         => 'No incidents reported',
-        'past'         => 'Past Incidents',
+        'past'         => 'Incidents',
         'stickied'     => 'Stickied Incidents',
         'scheduled'    => 'Scheduled Maintenance',
         'scheduled_at' => ', scheduled :timestamp',
@@ -76,7 +76,7 @@ return [
     // Subscriber
     'subscriber' => [
         'subscribe'           => 'Subscribe to get the most recent updates',
-        'unsubscribe'         => 'Unsubscribe',
+        'unsubscribe'         => 'Unsubscribe :link',
         'button'              => 'Subscribe',
         'manage_subscription' => 'Manage subscription',
         'manage'              => [
